@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator and  Manager</title>
+</head>
+<body>
+    <main class="container">
+        <section class="generate ">
+            <section class="gContent">
+                <h1>Password Generator</h1>
+                <div class="gTextBox">
+                    <input type="text" class="gPassword" id="passwordField" readonly>
+                    <i class="fa-regular fa-clipboard" id="copyButton"></i>
+                    <p class="copy">Copied</p>
+                </div>
+                <section class="gInfo">
+                    <form class="form">
+                        <label for="charAmount">Number of Characters</label>
+                        <div class="gRA">
+                            <input type="range" min="1" max="30" value="13" id="charRange">
+                            <input type="number" min="1" max="30" value="13" id="charAmount">                        
+                        </div>
+                        <label for="uCheck">Include Uppercase</label>
+                        <input type="checkbox" id="uCheck">
+                        <label for="nCheck">Include Numbers</label>
+                        <input type="checkbox" id="nCheck">
+                        <label for="sCheck">Include Symbols</label>
+                        <input type="checkbox" id="sCheck">
+                        <div class="button">
+                            <button type="submit" id="gButton">Generate Password</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </section>
+        <section class="manager">
+            <section class="mContent">
+                <h1></h1>
+            </section>
+        </section>
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>
