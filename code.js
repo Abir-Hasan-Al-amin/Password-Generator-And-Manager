@@ -119,6 +119,9 @@ let row=`
 </tr>`;
 mTable.innerHTML=mTable.innerHTML+row;
 m++;
+website.value="";
+user.value="";
+mPass.value="";
 }
 mButton.addEventListener('click', e => {
     e.preventDefault();
@@ -134,13 +137,17 @@ mButton.addEventListener('click', e => {
         const data = JSON.parse(manager);
         const websiteExists = data.some((element) => element.website === newWebsite);
 
-        if (!websiteExists) {
-            let info = JSON.parse(localStorage.getItem("manager"));
-            info.push({ website: newWebsite, username: user.value, userPassword: mPass.value });
-            localStorage.setItem("manager", JSON.stringify(info));
-            rowAdd();
-        } else {
-            alert('Website already exists. Please enter a different website.');
+        if(newWebsite !=="" && user.value!=="" && mPass.value!==""){
+            if (!websiteExists) {
+                let info = JSON.parse(localStorage.getItem("manager"));
+                info.push({ website: newWebsite, username: user.value, userPassword: mPass.value });
+                localStorage.setItem("manager", JSON.stringify(info));
+                rowAdd();
+            } else {
+                alert('Website already exists. Please enter a different website.');
+            }
+        }else{
+            alert('Input Missing.');
         }
     }
 });
@@ -149,9 +156,9 @@ mButton.addEventListener('click', e => {
 function editInfo(e) {
     let info=localStorage.getItem("manager");
         let data=JSON.parse(info);
-        let newPassValue=prompt('Enter the new password:');
         let newWebValue=prompt('Enter the new website:');
         let newUserValue=prompt('Enter the new username:');
+        let newPassValue=prompt('Enter the new password:');
         data[e].username=newUserValue;
         data[e].website=newWebValue;
         data[e].userPassword=newPassValue;
