@@ -65,3 +65,106 @@ function generatePassword(cAR, iUpper, iNumber, iSymbols) {
     }   
     return result.join('');
 }
+
+// manager
+const mButton=document.getElementById('mButton');
+const mPass=document.getElementById('mPass');
+const user=document.getElementById('user');
+const website=document.getElementById('website');
+
+const web=document.getElementById('web');
+const mTuser=document.getElementById('mTuser');
+const mTpass=document.getElementById('mTpass');
+const mDel=document.getElementById('mDel');
+// table row 
+function mainRow(){
+    let row=`<tr>
+    <th>Website</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Edit</th>
+    <th>Delete</th>
+</tr>`;
+mTable.innerHTML=mTable.innerHTML+row;
+}
+let m=0;
+const mTable=document.getElementById("mTable");
+function tableFill() {
+    mainRow();
+    let info=localStorage.getItem("manager");
+    if(info!== null){
+        let data=JSON.parse(info);
+        data.forEach(element => {
+            let row=`<tr>
+            <td id="web" >${element.website}</td>
+            <td id="mTuser">${element.username}</td>
+            <td id="mTpass">${element.userPassword}</td>
+            <td id="mEdit" onclick="editInfo(${m})"><i class="fa-regular fa-pen-to-square"></i></td>
+            <td id="mDel" onclick="rowDelete('${element.website}')"><i class="fa-solid fa-trash"></i></td>
+            </tr>`;
+            mTable.innerHTML=mTable.innerHTML+row;
+            m++;
+        });
+    }
+}
+tableFill();
+function rowAdd() {
+let row=`
+<tr>
+<td id="web">${website.value}</td>
+<td id="mTuser">${user.value}</td>
+<td id="mTpass">${mPass.value}</td>
+<td id="mEdit" onclick="editInfo(${m})"><i class="fa-regular fa-pen-to-square"></i></td>
+<td id="mDel" onclick="rowDelete('${website.value}')"><i class="fa-solid fa-trash"></i></td>
+</tr>`;
+mTable.innerHTML=mTable.innerHTML+row;
+m++;
+}
+mButton.addEventListener('click', e => {
+    e.preventDefault();
+    const newWebsite = website.value;
+    const manager = localStorage.getItem("manager");
+
+    if (manager === null) {
+        let info = [];
+        info.push({ website: newWebsite, username: user.value, userPassword: mPass.value });
+        localStorage.setItem("manager", JSON.stringify(info));
+        rowAdd();
+    } else {
+        const data = JSON.parse(manager);
+        const websiteExists = data.some((element) => element.website === newWebsite);
+
+        if (!websiteExists) {
+            let info = JSON.parse(localStorage.getItem("manager"));
+            info.push({ website: newWebsite, username: user.value, userPassword: mPass.value });
+            localStorage.setItem("manager", JSON.stringify(info));
+            rowAdd();
+        } else {
+            alert('Website already exists. Please enter a different website.');
+        }
+    }
+});
+
+//edit 
+function editInfo(e) {
+    let info=localStorage.getItem("manager");
+        let data=JSON.parse(info);
+        let newPassValue=prompt('Enter the new password:');
+        let newWebValue=prompt('Enter the new website:');
+        let newUserValue=prompt('Enter the new username:');
+        data[e].username=newUserValue;
+        data[e].website=newWebValue;
+        data[e].userPassword=newPassValue;
+        localStorage.setItem("manager", JSON.stringify(data));
+        mTable.innerHTML = '';
+        tableFill();
+    console.log(newUserValue);
+}
+function rowDelete(website) {
+    let info = localStorage.getItem('manager');
+    let data = JSON.parse(info);
+    upData = data.filter((element) => element.website !== website);
+    localStorage.setItem('manager', JSON.stringify(upData));
+    mTable.innerHTML = '';
+    tableFill();
+}
