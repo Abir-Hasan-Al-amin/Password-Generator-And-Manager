@@ -1,12 +1,20 @@
 # Password Generator And Manager
  
-![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/68d3b597-fa82-461e-acde-09dc2c120e49)
-![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/ae5a282e-f7a6-41a6-906b-b43ddc9f41e7)
-![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/6bd06c59-1aa5-459d-8668-3229eae3f84d)
-![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/758c8af5-89e4-4cc2-beea-d6979e0c6799)
-![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/333cf70c-9cdb-4dc5-b7fe-c59d96d469ec)
-![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/68c1fec5-d023-41c0-b066-70a4676b77c7)
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/023fb6e6-fa63-42aa-a13d-e051b89ac781)
 
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/fca0b15e-199d-4fac-baa5-5b68aae8646d)
 
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/6d6ddce4-86b4-4ff0-a67b-f4f241781d53)
 
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/92838400-dcee-49ab-a7d7-67bc2616cf80)
+
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/76f75369-1b02-4847-92c4-0f5c75ca2671)
+
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/606bbf24-3d7b-412a-a35d-e4cd30729281)
+
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/ed7aca13-a7bd-4c73-b863-e9d099df28ab)
+
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/fe6dde3f-a74c-4103-a0ae-d4a0fe9e9b95)
+
+![image](https://github.com/Abir-Hasan-Al-amin/Password-Generator-And-Manager/assets/140844292/34ac8180-59ca-4346-a746-c882e70c4b59)
 
